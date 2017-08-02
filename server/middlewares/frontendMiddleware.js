@@ -9,6 +9,7 @@ const addDevMiddlewares = (app, webpackConfig) => {
   const webpack = require('webpack');
   const webpackDevMiddleware = require('webpack-dev-middleware');
   const webpackHotMiddleware = require('webpack-hot-middleware');
+  console.log(webpackConfig);
   const compiler = webpack(webpackConfig);
   const middleware = webpackDevMiddleware(compiler, {
     noInfo: true,
